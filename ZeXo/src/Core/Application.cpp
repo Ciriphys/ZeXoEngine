@@ -1,6 +1,7 @@
 #include "Application.h"
 
-#include <cstdio>
+#include "Events/KeyEvents.h"
+#include "Logger.h"
 
 namespace ZeXo
 { 
@@ -10,7 +11,9 @@ namespace ZeXo
 
 	void Application::Run()
 	{
-		printf("Welcome to ZeXo Engine!");
+		KeyPressed keyPress = KeyPressed(52, 0);
+		ZX_CORE_LOGGER_TRACE("Welcome to ZeXo Engine!");
+		ZX_CORE_LOGGER_INFO(keyPress.GetEventInfo());
 		while (true);
 	}
 
