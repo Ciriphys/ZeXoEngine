@@ -1,0 +1,3 @@
+[submodule "ZeXo/ThirdParty/spdlog"]
+	path = ZeXo/ThirdParty/spdlog
+	url = https://www.github.com/gabime/spdlog
