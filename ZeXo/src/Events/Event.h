@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Core/Macro.h"
+#include "zxpch.h"
 
-#include <string>
-#include <functional>
+#include "Core/Macro.h"
 
 namespace ZeXo
 {
@@ -22,6 +21,8 @@ namespace ZeXo
 
 		AppTick,
 		AppRender,
+
+		// Add more events;
 	};
 
 	class ZX_API Event
@@ -46,14 +47,14 @@ namespace ZeXo
 	{
 	private:
 		template <typename T>
-		using EventFunction = std::function<bool(const T&)>;
+		using EventFunction = std::function<bool(T&)>;
 
 		Event& m_Event;
 	public:
 		EventDispatcher(Event& e) : m_Event(e) {}
 
 		template <typename T>
-		bool Dispatch(EventFunction<T> function)
+		bool Emit(EventFunction<T> function)
 		{
 			if (m_Event.GetEventType() == T::GetEventStaticType())
 			{
@@ -64,4 +65,7 @@ namespace ZeXo
 			return false;
 		}
 	};
+
+	#define ZX_BIND_FUNCTION(fn) std::bind(fn, std::placeholders::_1)
+	#define ZX_BIND_MEMBER_FUNCTION(owner, fn) std::bind(fn, owner, std::placeholders::_1)
 }
