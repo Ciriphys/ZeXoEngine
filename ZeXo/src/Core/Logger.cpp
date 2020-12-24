@@ -12,7 +12,7 @@ namespace ZeXo
 		spdlog::set_pattern("%^[%T] { %n } %v%$");
 
 		s_CoreLogger	= spdlog::stdout_color_mt("ZeXo Engine");
-		s_ClientLogger  = spdlog::stdout_color_mt("Client"); // Todo : Use Application Name
+		s_ClientLogger  = spdlog::stdout_color_mt("ZeXo Client");
 
 		s_CoreLogger->set_level(spdlog::level::level_enum::trace);
 		s_ClientLogger->set_level(spdlog::level::level_enum::trace);

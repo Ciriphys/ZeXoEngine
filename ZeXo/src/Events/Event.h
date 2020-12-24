@@ -66,6 +66,5 @@ namespace ZeXo
 		}
 	};
 
-	#define ZX_BIND_FUNCTION(fn) std::bind(fn, std::placeholders::_1)
-	#define ZX_BIND_MEMBER_FUNCTION(owner, fn) std::bind(fn, owner, std::placeholders::_1)
+	#define ZX_BIND_FUNCTION(...) std::bind(__VA_ARGS__, std::placeholders::_1)
 }
