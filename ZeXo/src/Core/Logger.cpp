@@ -1,3 +1,5 @@
+#include "zxpch.h"
+
 #include "Logger.h"
 
 namespace ZeXo
@@ -7,7 +9,7 @@ namespace ZeXo
 
 	void Logger::Init()
 	{
-		spdlog::set_pattern("%^[%T] [ %n ]: %v%$");
+		spdlog::set_pattern("%^[%T] { %n } %v%$");
 
 		s_CoreLogger	= spdlog::stdout_color_mt("ZeXo Engine");
 		s_ClientLogger  = spdlog::stdout_color_mt("Client"); // Todo : Use Application Name

@@ -1,318 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="File di origine">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Core">
+      <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="File di intestazione">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="File di risorse">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Events">
+      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ZeXo.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\Macro.h">
-      <Filter>File di intestazione</Filter>
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\EntryPoint.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\cfg\argv.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\cfg\env.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\cfg\helpers.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\cfg\helpers-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\backtracer.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\backtracer-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\circular_q.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\console_globals.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\file_helper.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\file_helper-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\fmt_helper.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\log_msg.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\log_msg_buffer.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\log_msg_buffer-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\log_msg-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\mpmc_blocking_q.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\null_mutex.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\os.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\os-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\periodic_worker.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\periodic_worker-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\registry.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\registry-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\synchronous_factory.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\tcp_client.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\tcp_client-windows.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\thread_pool.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\thread_pool-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\details\windows_include.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\chrono.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\color.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\compile.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\core.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\format.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\format-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\locale.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\os.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\ostream.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\posix.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\printf.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bundled\ranges.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\bin_to_hex.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\chrono.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\fmt.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fmt\ostr.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\android_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\ansicolor_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\ansicolor_sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\base_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\base_sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\basic_file_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\basic_file_sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\daily_file_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\dist_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\dup_filter_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\hourly_file_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\msvc_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\null_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\ostream_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\ringbuffer_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\rotating_file_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\rotating_file_sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\stdout_color_sinks.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\stdout_color_sinks-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\stdout_sinks.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\stdout_sinks-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\syslog_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\systemd_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\tcp_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\win_eventlog_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\wincolor_sink.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\sinks\wincolor_sink-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\async.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\async_logger.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\async_logger-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\common.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\common-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\formatter.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\fwd.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\logger.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\logger-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\pattern_formatter.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\pattern_formatter-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\spdlog.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\spdlog-inl.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\stopwatch.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\tweakme.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\spdlog\include\spdlog\version.h">
-      <Filter>File di intestazione</Filter>
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Logger.h">
-      <Filter>File di intestazione</Filter>
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Macro.h">
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Events\Event.h">
-      <Filter>File di intestazione</Filter>
+      <Filter>Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Events\KeyEvents.h">
-      <Filter>File di intestazione</Filter>
+      <Filter>Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Events\MouseEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\WindowEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ZeXo.h" />
+    <ClInclude Include="src\zxpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
-      <Filter>File di origine</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Logger.cpp">
-      <Filter>File di origine</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\zxpch.cpp" />
   </ItemGroup>
 </Project>
