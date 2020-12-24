@@ -4,6 +4,11 @@ workspace "ZeXo"
 
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
     
+    ExternalDirectories = {}
+    ExternalDirectories["GLFW"] = "ZeXo/ThirdParty/GLFW/include"
+
+    include "ZeXo/ThirdParty/GLFW" -- Include TheCherno's premake5.lua file
+
 project "ZeXo"
     location "ZeXo"
     kind "SharedLib"
@@ -13,10 +18,11 @@ project "ZeXo"
     objdir    ("bin/intermediates/" .. outputdir .. "/%{prj.name}")
 
     files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-    includedirs { "%{prj.name}/src", "%{prj.name}/ThirdParty/spdlog/include" }
-     
+    includedirs { "%{prj.name}/src", "%{prj.name}/ThirdParty/spdlog/include", "%{ExternalDirectories.GLFW}" }
+    links { "GLFW", "opengl32.lib" }
+    
     pchheader "zxpch.h"
-    pchsource "ZeXo/src/zxpch.cpp" 
+    pchsource "%{prj.name}/src/zxpch.cpp" 
 
     filter { "system:windows" }
         cppdialect "C++17"

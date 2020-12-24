@@ -54,7 +54,7 @@ namespace ZeXo
 		virtual std::string GetEventInfo() const override
 		{
 			std::stringstream ss;
-			ss << "KeyReleased: [Keycode(" << m_Keycode << ")";
+			ss << "KeyReleased: [Keycode(" << m_Keycode << ")]";
 			return ss.str();
 		}
 

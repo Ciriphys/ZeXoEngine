@@ -3,7 +3,7 @@
 class SandboxApplication : public ZeXo::Application
 {
 public:
-	 SandboxApplication() {}
+	 SandboxApplication(const char * appName = "ZeXo Client") : ZeXo::Application(appName) {}
 	~SandboxApplication() {}
 
 };
