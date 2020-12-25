@@ -41,6 +41,8 @@ namespace ZeXo
 		virtual std::string GetEventInfo()		const = 0;
 
 		virtual bool IsHandled() const = 0;
+
+		inline operator bool() const { return IsHandled(); }
 	};
 
 	class EventDispatcher

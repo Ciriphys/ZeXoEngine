@@ -9,6 +9,9 @@ namespace ZeXo
 	class ZX_API Input
 	{
 	public:
+		Input(const Input&) = delete;
+		Input& operator=(const Input&) = delete;
+
 		bool GetKey(int key);
 		bool GetKeyPress(int key);
 		bool GetKeyRelease(int key);

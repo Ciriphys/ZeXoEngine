@@ -105,8 +105,11 @@
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Core\Layer.h" />
+    <ClInclude Include="src\Core\LayerContainer.h" />
     <ClInclude Include="src\Core\Logger.h" />
     <ClInclude Include="src\Core\Macro.h" />
+    <ClInclude Include="src\Core\Utility.h" />
     <ClInclude Include="src\Core\Window.h" />
     <ClInclude Include="src\Events\Event.h" />
     <ClInclude Include="src\Events\KeyEvents.h" />
@@ -120,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\LayerContainer.cpp" />
     <ClCompile Include="src\Core\Logger.cpp" />
     <ClCompile Include="src\Input\Input.cpp" />
     <ClCompile Include="src\Platform\Windows\WinWindow.cpp" />
