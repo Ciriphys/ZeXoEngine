@@ -47,6 +47,8 @@
     </ClInclude>
     <ClInclude Include="src\ZeXo.h" />
     <ClInclude Include="src\zxpch.h" />
+    <ClInclude Include="src\Input\Input.h" />
+    <ClInclude Include="src\Input\Keycodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -55,9 +57,10 @@
     <ClCompile Include="src\Core\Logger.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\winWindow.cpp">
+    <ClCompile Include="src\zxpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WinWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\zxpch.cpp" />
+    <ClCompile Include="src\Input\Input.cpp" />
   </ItemGroup>
 </Project>

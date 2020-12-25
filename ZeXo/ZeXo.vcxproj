@@ -112,6 +112,8 @@
     <ClInclude Include="src\Events\KeyEvents.h" />
     <ClInclude Include="src\Events\MouseEvents.h" />
     <ClInclude Include="src\Events\WindowEvents.h" />
+    <ClInclude Include="src\Input\Input.h" />
+    <ClInclude Include="src\Input\Keycodes.h" />
     <ClInclude Include="src\Platform\Windows\WinWindow.h" />
     <ClInclude Include="src\ZeXo.h" />
     <ClInclude Include="src\zxpch.h" />
@@ -119,7 +121,8 @@
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Logger.cpp" />
-    <ClCompile Include="src\Platform\Windows\winWindow.cpp" />
+    <ClCompile Include="src\Input\Input.cpp" />
+    <ClCompile Include="src\Platform\Windows\WinWindow.cpp" />
     <ClCompile Include="src\zxpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

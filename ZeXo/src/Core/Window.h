@@ -3,8 +3,11 @@
 #include "Core/Macro.h"
 #include "Events/Event.h"
 
+struct GLFWwindow;
+
 namespace ZeXo
 {
+
 	class ZX_API Window
 	{
 	public:
@@ -36,6 +39,8 @@ namespace ZeXo
 		virtual void Init() = 0;
 		virtual void Tick() = 0;
 		virtual void Shutdown() const = 0;
+
+		virtual GLFWwindow* glfwGetWindow() const = 0;
 
 	private:
 		WindowAttributes m_Data;
