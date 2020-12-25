@@ -49,6 +49,9 @@
     <ClInclude Include="src\zxpch.h" />
     <ClInclude Include="src\Input\Input.h" />
     <ClInclude Include="src\Input\Keycodes.h" />
+    <ClInclude Include="src\Core\Layer.h" />
+    <ClInclude Include="src\Core\LayerContainer.h" />
+    <ClInclude Include="src\Core\Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -62,5 +65,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Input\Input.cpp" />
+    <ClCompile Include="src\Core\LayerContainer.cpp" />
   </ItemGroup>
 </Project>

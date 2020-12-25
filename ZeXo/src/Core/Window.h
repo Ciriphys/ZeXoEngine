@@ -27,7 +27,7 @@ namespace ZeXo
 		Window(const WindowAttributes& wndAttrib = WindowAttributes("ZeXo Client")) : m_Data(wndAttrib) {}
 		virtual ~Window() {}
 
-		WindowAttributes GetWindowData() const { return m_Data; }
+		WindowAttributes& GetWindowData() { return m_Data; }
 
 		inline const char* GetWindowTitle() const { return m_Data.wndName; }
 		inline unsigned int GetWidth()  const { return m_Data.wndWidth;  }
@@ -38,7 +38,8 @@ namespace ZeXo
 
 		virtual void Init() = 0;
 		virtual void Tick() = 0;
-		virtual void Shutdown() const = 0;
+		virtual void Exit() const = 0;
+		virtual void SetVsync(bool shouldVsync) = 0;
 
 		virtual GLFWwindow* glfwGetWindow() const = 0;
 

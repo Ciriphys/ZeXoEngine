@@ -28,12 +28,12 @@ namespace ZeXo
 
 	WinWindow::~WinWindow()
 	{
-		Shutdown();
+		Exit();
 	}
 
 	void WinWindow::Init()
 	{
-		Window::WindowAttributes data = GetWindowData();
+		Window::WindowAttributes& data = GetWindowData();
 		
 		if (!s_Init)
 		{
@@ -134,10 +134,15 @@ namespace ZeXo
 		glfwSwapBuffers(m_Window);
 	}
 
-	void WinWindow::Shutdown() const
+	void WinWindow::Exit() const
 	{
 		glfwDestroyWindow(m_Window);
 		glfwTerminate();
+	}
+
+	void WinWindow::SetVsync(bool shouldVsync)
+	{
+		glfwSwapInterval(shouldVsync);
 	}
 
 	void WinWindow::SetEventCallbackProc(const EventCallbackFunction& cbfn)

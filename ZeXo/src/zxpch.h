@@ -3,6 +3,7 @@
 // Utility
 #include <memory>
 #include <utility>
+#include <algorithm>
 #include <functional>
 
 // Data Structures
