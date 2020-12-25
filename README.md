@@ -7,7 +7,7 @@ P.S. This project is inspired by Hazel Engine by The Cherno.
 ## Goal
 I am making ZeXo for educational purpose. The goal is to have a better understanding of OpenGL.
 The idea is to make a robust Game Engine for 2D Videogames. Once ZeXo 2D is ready there will be a huge step up
-and ZeXo will be able to support 3D rendering(Hopefully!)
+and ZeXo will be able to support 3D rendering (Hopefully!)
 
 ## Main features to come
 * Layers 
@@ -16,6 +16,7 @@ and ZeXo will be able to support 3D rendering(Hopefully!)
 * Math library (Linear Algebra Math Library that supports vector and matrix calculations like glm)
 * OpenGL Renderer
 * ZeXo Editor (?)
+* Much more!
 
 ## Clone 
 To clone the repository use:
