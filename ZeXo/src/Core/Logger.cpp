@@ -4,8 +4,8 @@
 
 namespace ZeXo
 {
-	std::shared_ptr<spdlog::logger> Logger::s_CoreLogger;
-	std::shared_ptr<spdlog::logger> Logger::s_ClientLogger;
+	Shared<spdlog::logger> Logger::s_CoreLogger;
+	Shared<spdlog::logger> Logger::s_ClientLogger;
 
 	void Logger::Init()
 	{

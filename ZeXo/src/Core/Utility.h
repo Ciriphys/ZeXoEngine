@@ -23,7 +23,7 @@ namespace ZeXo
 	}
 
 	template <typename T>
-	using Weak = std::shared_ptr<T>;
+	using Weak = std::weak_ptr<T>;
 
 	template<typename T>
 	static Weak<T> CreateWeak(T* val)
