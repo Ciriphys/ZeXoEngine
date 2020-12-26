@@ -60,7 +60,7 @@
       <PrecompiledHeaderFile>zxpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZX_BUILD_DLL;ZX_PLAT_WIN;DEBUG;ZX_USE_LOGGER;ZX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;ThirdParty\spdlog\include;ThirdParty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;ThirdParty\spdlog\include;ThirdParty\GLFW\include;ThirdParty\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -82,7 +82,7 @@
       <PrecompiledHeaderFile>zxpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZX_BUILD_DLL;ZX_PLAT_WIN;NDEBUG;ZX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;ThirdParty\spdlog\include;ThirdParty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;ThirdParty\spdlog\include;ThirdParty\GLFW\include;ThirdParty\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -109,6 +109,7 @@
     <ClInclude Include="src\Core\LayerContainer.h" />
     <ClInclude Include="src\Core\Logger.h" />
     <ClInclude Include="src\Core\Macro.h" />
+    <ClInclude Include="src\Core\Time.h" />
     <ClInclude Include="src\Core\Utility.h" />
     <ClInclude Include="src\Core\Window.h" />
     <ClInclude Include="src\Events\Event.h" />
@@ -132,6 +133,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ThirdParty\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
     <ProjectReference Include="ThirdParty\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
     </ProjectReference>

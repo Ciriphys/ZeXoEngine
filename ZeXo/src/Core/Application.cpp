@@ -3,12 +3,17 @@
 #include "Application.h"
 
 #include "Logger.h"
+#include "Time.h"
 
 namespace ZeXo
 { 
+#define COMPUTE_TIME double currentFrame = m_Window->GetWindowTime();\
+	Time timeHandler = currentFrame - m_LastFrameTime;\
+	m_LastFrameTime = currentFrame;
+
 	Application * Application::s_Instance = nullptr;
 
-	Application::Application(const char * appName) : m_Running(true), m_AppName(appName)
+	Application::Application(const char * appName) : m_Running(true), m_Minimized(false), m_AppName(appName), m_LastFrameTime(0.0)
 	{
 		ZX_ASSERT(!s_Instance, "Another instance of Application exists!");
 		s_Instance = this;
@@ -30,14 +35,14 @@ namespace ZeXo
 		ZX_CORE_LOGGER_TRACE("Welcome to ZeXo Engine!");
 		while (m_Running)
 		{
-			// Todo : Compute deltaTime
+			COMPUTE_TIME;
 			m_Window->Tick();
 
 			if (!m_Minimized)
 			{
 				for (auto& layer : *m_LayerHandler)
 				{
-					layer->Tick();
+					layer->Tick(timeHandler.GetDeltaTime());
 				}
 			}
 		}
@@ -92,6 +97,10 @@ namespace ZeXo
 		{
 			m_Minimized = true;
 		}
+		else
+		{
+			m_Minimized = false;
+		}
 
 		return true;
 	}
@@ -113,4 +122,6 @@ namespace ZeXo
 		ZX_CORE_LOGGER_TRACE("{0} key has been released.", m_InputHandler->GetKeyName(e.GetKeyCode()));
 		return true;
 	}
+
+
 }

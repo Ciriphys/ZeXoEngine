@@ -2,6 +2,7 @@
 
 #include "Macro.h"
 
+#include "Time.h"
 #include "Events/Event.h"
 
 namespace ZeXo
@@ -14,7 +15,7 @@ namespace ZeXo
 		virtual void Event(Event& e) = 0;
 		virtual void BeginLayer() = 0;
 		virtual void EndLayer() = 0;
-		virtual void Tick() = 0; // Todo : Add time
+		virtual void Tick(double deltaTime) = 0;
 
 		inline const char* GetLayerName() const { return m_LayerName; }
 

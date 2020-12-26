@@ -5,6 +5,7 @@
 #include "Core/Macro.h"
 #include "Core/Window.h"
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 namespace ZeXo
@@ -20,8 +21,8 @@ namespace ZeXo
 		virtual void Init() override;
 		virtual void Tick() override;
 		virtual void Exit() const override;
-
 		virtual void SetVsync(bool shouldVsync) override;
+		virtual double GetWindowTime() const override;
 
 		virtual GLFWwindow * glfwGetWindow() const override { return m_Window; };
 

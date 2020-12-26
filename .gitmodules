@@ -4,3 +4,9 @@
 [submodule "GLFW"]
 	path = GLFW
 	url = https://www.github.com/TheCherno/GLFW
+[submodule "ZeXo/ThirdParty/ImGui"]
+	path = ZeXo/ThirdParty/ImGui
+	url = https://github.com/Ciridev/imgui
+[submodule "imgui"]
+	path = imgui
+	url = https://github.com/TheCherno/imgui/

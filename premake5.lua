@@ -5,9 +5,11 @@ workspace "ZeXo"
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
     
     ExternalDirectories = {}
-    ExternalDirectories["GLFW"] = "ZeXo/ThirdParty/GLFW/include"
+    ExternalDirectories["GLFW"]  = "ZeXo/ThirdParty/GLFW/include"
+    ExternalDirectories["Glad"]  = "ZeXo/ThirdParty/Glad/include"
 
-    include "ZeXo/ThirdParty/GLFW" -- Include TheCherno's premake5.lua file
+    include "ZeXo/ThirdParty/GLFW"
+    include "ZeXo/ThirdParty/Glad"
 
 project "ZeXo"
     location "ZeXo"
@@ -18,8 +20,8 @@ project "ZeXo"
     objdir    ("bin/intermediates/" .. outputdir .. "/%{prj.name}")
 
     files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-    includedirs { "%{prj.name}/src", "%{prj.name}/ThirdParty/spdlog/include", "%{ExternalDirectories.GLFW}" }
-    links { "GLFW", "opengl32.lib" }
+    includedirs { "%{prj.name}/src", "%{prj.name}/ThirdParty/spdlog/include", "%{ExternalDirectories.GLFW}", "%{ExternalDirectories.Glad}" }
+    links { "Glad", "GLFW", "opengl32.lib" }
     
     pchheader "zxpch.h"
     pchsource "%{prj.name}/src/zxpch.cpp" 

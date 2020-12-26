@@ -7,6 +7,9 @@
     <Filter Include="Events">
       <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{953A660D-014F-8EBE-CAD0-311E36A48AEF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -21,10 +24,22 @@
     <ClInclude Include="src\Core\EntryPoint.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\Layer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\LayerContainer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Core\Logger.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Macro.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Time.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Utility.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Window.h">
@@ -42,29 +57,34 @@
     <ClInclude Include="src\Events\WindowEvents.h">
       <Filter>Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Input\Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Input\Keycodes.h">
+      <Filter>Input</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WinWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\ZeXo.h" />
     <ClInclude Include="src\zxpch.h" />
-    <ClInclude Include="src\Input\Input.h" />
-    <ClInclude Include="src\Input\Keycodes.h" />
-    <ClInclude Include="src\Core\Layer.h" />
-    <ClInclude Include="src\Core\LayerContainer.h" />
-    <ClInclude Include="src\Core\Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\LayerContainer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Core\Logger.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\zxpch.cpp" />
+    <ClCompile Include="src\Input\Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WinWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Input\Input.cpp" />
-    <ClCompile Include="src\Core\LayerContainer.cpp" />
+    <ClCompile Include="src\zxpch.cpp" />
   </ItemGroup>
 </Project>
