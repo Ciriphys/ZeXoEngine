@@ -1,0 +1,2 @@
+G:\ZeXoEngine\ZeXo\ZeXo\ThirdParty\Glad\bin\Debug\Glad.pdb
+G:\ZeXoEngine\ZeXo\ZeXo\ThirdParty\Glad\obj\Debug\Glad.pdb

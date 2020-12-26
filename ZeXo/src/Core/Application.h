@@ -50,6 +50,9 @@ namespace ZeXo
 		static Application * s_Instance;
 
 		const char* m_AppName;
+
+		double m_LastFrameTime;
+
 		bool m_Running;
 		bool m_Minimized;
 	};

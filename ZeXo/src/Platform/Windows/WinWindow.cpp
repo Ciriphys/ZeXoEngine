@@ -37,8 +37,7 @@ namespace ZeXo
 		
 		if (!s_Init)
 		{
-			int success = glfwInit();
-			ZX_ASSERT(success, "GLFW initialization didn't succed!");
+			ZX_ASSERT(glfwInit(), "GLFW initialization didn't succed!");
 			s_Init = true;		
 		}
 
@@ -48,6 +47,7 @@ namespace ZeXo
 		ZX_CORE_LOGGER_INFO("Created window {0} [{1}, {2}]", data.wndName, data.wndWidth, data.wndHeight);
 
 		glfwMakeContextCurrent(m_Window);
+		ZX_ASSERT(gladLoadGLLoader((GLADloadproc)glfwGetProcAddress), "Could not initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_CallbackFn);
 
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
@@ -143,6 +143,11 @@ namespace ZeXo
 	void WinWindow::SetVsync(bool shouldVsync)
 	{
 		glfwSwapInterval(shouldVsync);
+	}
+
+	double WinWindow::GetWindowTime() const
+	{
+		return glfwGetTime();
 	}
 
 	void WinWindow::SetEventCallbackProc(const EventCallbackFunction& cbfn)

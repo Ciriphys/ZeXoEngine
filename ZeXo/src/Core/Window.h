@@ -40,6 +40,7 @@ namespace ZeXo
 		virtual void Tick() = 0;
 		virtual void Exit() const = 0;
 		virtual void SetVsync(bool shouldVsync) = 0;
+		virtual double GetWindowTime() const = 0;
 
 		virtual GLFWwindow* glfwGetWindow() const = 0;
 
