@@ -10,9 +10,8 @@ The idea is to make a robust Game Engine for 2D Videogames. Once ZeXo 2D is read
 and ZeXo will be able to support 3D rendering (Hopefully!)
 
 ## Main features to come
-* Layers 
-* GLAD
-* ImGui
+* ~Layers~
+* ~GLAD~
 * Math library (Linear Algebra Math Library that supports vector and matrix calculations like glm)
 * OpenGL Renderer
 * ZeXo Editor (?)
